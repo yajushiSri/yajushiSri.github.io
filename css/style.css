@@ -110,11 +110,12 @@ p {
 }
 
 .padDiv {
-  padding: 30px 30px;
+  padding: 20px 20px;
 }
 
 .section-title {
   margin-bottom: 70px;
+  text-align: center;
 }
 
 .section-title h2 {
@@ -582,7 +583,7 @@ nav ul li a {
 }
 
 #contact .socials-media ul li a {
-  font-size: 40px;
+  font-size: 20px;
   color: #000;
   letter-spacing: 0.5em;
   font-weight: 500;
@@ -732,9 +733,9 @@ nav ul li a {
 
 .service-box {
   background-color: #fff;
-  padding: 2.5rem 1.3rem;
+  padding: 1.5rem 0.7rem;
   border-radius: 1rem;
-  margin-bottom: 10rem;
+  margin-bottom: 10px;
 }
 
 .service-box:hover .ico-circle {
