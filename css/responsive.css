@@ -90,6 +90,49 @@
  */
 
 @media (max-width: 767px) {
+/*Changes Service Block*/
+#services {
+  padding-bottom: 30px; /**/
+  text-align: center; /**/
+}
+.services-block span {
+  margin: 10px 0;
+  position: relative;
+  font-size: 13px;
+  color: #292929;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: block;
+}
+.owl-item {
+  float: left; 
+}
+.services-block .separator {
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.services-block i {
+  font-size: 30px; /**/
+  color: #0B5869;
+  line-height: 44px;
+}
+
+.services-carousel .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 6px !important; /**/
+  height: 6px !important; /**/
+  border-radius: 50%;
+  border: 0;
+  padding: 0 !important;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+
   /* Navbar */
   nav {
     padding: 20px 15px;
