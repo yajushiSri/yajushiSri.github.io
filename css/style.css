@@ -436,6 +436,7 @@ nav ul li a {
 
 .portfolio-thumbnail {
   margin: auto;
+  margin-bottom: 5px;
   width: 70%;
   overflow: hidden;
   min-height: 100px;
@@ -443,6 +444,7 @@ nav ul li a {
 
 .portfolio-thumbnail img {
   max-width: 100%;
+  height: auto;
 }
 
 /*-----------------------------------------------------------------------------------*/
