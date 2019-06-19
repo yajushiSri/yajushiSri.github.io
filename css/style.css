@@ -291,23 +291,22 @@ nav ul li a {
 
 #about .div-img-bg {
   padding-bottom: 30px;
-  border: 20px solid #D3F451
+  border: 15px solid #D3F451
 }
 
 #about .div-img-bg .about-img img {
   width: 100%;
   box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
-  margin-top: -60px;
-  margin-left: 40px;
-  height: 400px;
+  margin-top: -50px;
+  margin-left: 30px;
+  height: 350px;
   object-fit: cover;
 }
 
 #about .about-descr .p-heading {
   font-family: 'Poppins', helvetica;
-  font-size: 28px;
+  font-size: 22px;
   text-align: left;
-
 }
 
 #about .about-descr .separator {
@@ -323,6 +322,7 @@ nav ul li a {
 #services {
   background: #FFF;
   position: relative;
+  padding-top: 50px;
   padding-bottom: 80px;
 }
 
@@ -332,7 +332,7 @@ nav ul li a {
 .services-block span {
   margin: 10px 0;
   position: relative;
-  font-size: 15px;
+  font-size: 13px;
   color: #292929;
   letter-spacing: 0.1em;
   font-weight: 500;
@@ -342,14 +342,14 @@ nav ul li a {
 
 .services-block .separator {
   margin: 0;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 22px;
 }
 
 .services-block i {
-  font-size: 44px;
+  font-size: 35px;
   color: #0B5869;
-  line-height: 44px;
+  line-height: 35px;
 }
 
 
@@ -358,7 +358,7 @@ nav ul li a {
 }
 
 .services-carousel .owl-dots {
-  margin-top: 5px;
+  margin-top: 1px;
   text-align: center;
 }
 
@@ -446,7 +446,6 @@ nav ul li a {
   max-width: 100%;
   height: auto;
 }
-
 /*-----------------------------------------------------------------------------------*/
 /*  Journal
 /*-----------------------------------------------------------------------------------*/
@@ -615,7 +614,7 @@ nav ul li a {
   background: #D3F451;
   padding-top: 50px;
   padding-bottom: 50px;
-  max-height: 20px;
+  min-height: 50px;
 }
 
 #footer .socials-media {
@@ -636,7 +635,7 @@ nav ul li a {
 
 #footer .socials-media ul li a {
   font-size: 24px;
-  color: #999;
+  color: #000;
   letter-spacing: 0.1em;
   font-weight: 500;
   background: transparent;
@@ -664,12 +663,6 @@ nav ul li a {
   margin-top: 0;
   text-transform: uppercase;
 }
-
-.credits {
-  font-size: 13px;
-}
-
-
 
 .popout {
   font-family: Futura, sans-serif;
