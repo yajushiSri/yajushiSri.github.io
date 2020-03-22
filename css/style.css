@@ -145,13 +145,13 @@ p {
 }
 
 .paddsection {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .paddsections {
-  padding-top: 90px;
-  padding-bottom: 90px !important;
+  padding-top: 50px;
+  padding-bottom: 50px !important;
 }
 
 .hvr-shutter-in-horizontal::before {
@@ -332,6 +332,7 @@ nav ul li a {
   height: auto;
   background: #FFF;
   padding-top: 190px;
+  justify-content: center;
 }
 
 #about .div-img-bg {
@@ -369,6 +370,7 @@ nav ul li a {
   position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
+  justify-content: center;
 }
 
 .owl-item {
@@ -377,7 +379,7 @@ nav ul li a {
 .services-block span {
   margin: 10px 0;
   position: relative;
-  font-size: 13px;
+  font-size: 15px;
   color: #292929;
   letter-spacing: 0.1em;
   font-weight: 500;
@@ -387,8 +389,8 @@ nav ul li a {
 
 .services-block .separator {
   margin: 0;
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 15px;
+  line-height: 25px;
 }
 
 .services-block i {
@@ -400,10 +402,11 @@ nav ul li a {
 
 .services-carousel  .owl-stage-outer {
   overflow: hidden;
+  align-content: center;
 }
 
 .services-carousel .owl-dots {
-  margin-top: 1px;
+  margin-top: 0.5px;
   text-align: center;
 }
 
@@ -414,7 +417,7 @@ nav ul li a {
   height: 12px !important;
   border-radius: 50%;
   border: 0;
-  padding: 0 !important;
+  padding: 0.5px !important;
   background-color: #ddd;
   cursor: pointer;
 }
@@ -679,7 +682,7 @@ nav ul li a {
 }
 
 #footer .socials-media ul li a {
-  font-size: 24px;
+  font-size: 30px;
   color: #000;
   letter-spacing: 0.1em;
   font-weight: 500;
@@ -702,7 +705,7 @@ nav ul li a {
 }
 
 #footer p {
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 0.1em;
   font-weight: 500;
   margin-top: 0;

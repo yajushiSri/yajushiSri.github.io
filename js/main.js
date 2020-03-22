@@ -79,7 +79,7 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["Yajushi Srivastava.", "SDET.", "FOSS APOSTLE.", "Designer.", "Photographer."],
+      strings: ["Yajushi Srivastava.", "FOSS APOSTLE.", "Designer.", "Photographer."],
       typeSpeed: 100,
       loop: true,
     });
@@ -98,7 +98,7 @@ $(document).ready(function() {
       dots: true,
       nav: false,
       responsiveClass: true,
-      responsive: { 0: { items: 1 }, 768: { items: 2 }, 900: { items: 4 } }
+      responsive: { 0: { items: 1 }, 768: { items: 2 }, 900: { items: 4 }, 1020: { items: 5} }
     });
 
   // ========================================================================= //
