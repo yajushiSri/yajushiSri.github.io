@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>HOME | Yajushi</title>
+  <link rel="icon" type="image/ico" href="images/favicon.png" />
+
+  <!--meta section-->
+  <meta property="og:title" content="Yajushi Srivastava">
+  <meta property="og:description" content="Yajushi is a Computer Science Graduate, currently working in Mindtree Ltd as a Software Engineer.">
+  <meta property="og:image" content="images/header.png">
+  <meta property="og:url" content="https://yajushisri.github.io">
+  <meta content="Yajushi Srivastava yajushiSri Docker Jaipur DevOps Mindtree software photographer photography shivi varanasi PyJaipur GirlScript India" name="keywords">
+  <!--meta section end-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/hover/hover.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Responsive css -->
+  <link href="css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- start section navbar -->
+  <nav id="main-nav">
+    <div class="row">
+      <div class="container">
+
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+
+        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+        <ul class="nav-menu list-unstyled">
+          <li><a href="./index.html" class="smoothScroll">Home</a></li>
+          <li><a href="./index.html#about" class="smoothScroll">About</a></li>
+          <li><a href="./index.html#service" class="smoothScroll">Projects</a></li>
+          <li><a href="./index.html#blogs" class="smoothScroll">Blog</a></li>
+          <li><a href="./portfolio.html" class="smoothScroll">Portfolio</a></li>          
+          <li><a href="./index.html#contact" class="smoothScroll">Contact</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <!-- End section navbar -->
+  <!-- start section main content -->
+  <div class="main-content paddsection">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="row">
+            <div class="container-main single-main">
+              <div class="col-md-12">
+                <div class="block-main mb-30">
+                  <div class="content-main single-post padDiv">
+                    <div class="journal-txt">
+                      <h2>Plug and Play: An Introduction to PAM!</h2><hr><br>
+                    </div>
+                    <div class="post-meta">
+                      <ul class="list-unstyled mb-0">
+                        <li class="date">date: <a href="#">January 30, 2018</a></li>
+                      </ul>
+                    </div>
+                    <p class="mb-30">
+                      The Pluggable Authentication Modules (PAM) library is a generalized API for authentication related services which allows a system administrator to dynamically configure authentication schemes for all PAM-enabled system utilities and applications by adding and removing PAM modules on the running system. It's a layer between Linux applications and native underlying authentication system. PAM is implemented as shared objects or so-files, and the applications communicate with the PAM library through the PAM API.
+                    </p>
+                    <img src="images\blog\pam-framework.png" class="img-responsive" alt="reviews2">
+                    <p class="mb-30">Traditionally, login authentication is done by comparing the encrypted password for the user in the password file (/etc/shadow), but each program that requires authentication implements its own authentication mechanisms. For example, various services like FTP, SSH, et cetera have individual ways of authenticating their users. As a result, the administrator has to spend unnecessary amount of time in maintaining the database. A PAM service module provides authentication and other security services to such applications. 
+                    </p>
+                    <img src="images\blog\pam-system-layout.png" class="img-responsive" alt="reviews2">
+                    <p class="mb-30">
+                    Syntax for application's configuration files in /etc/pam.d is,<br>
+                      module-type  control-flag  module-path  module-arguments<br></p>
+
+                    <h4>The four types of PAM services (Management Groups):</h4><br>
+                    <p>
+                    <b>1. Authentication  Management (auth)</b><br>
+                    For authenticating users and provide user's information to the application.<br><br>
+                    <b>2. Account Management (account)</b><br>
+                    For verifying the properties of the user's account.<br><br>
+                    <b>3. Session Management (session)</b><br>
+                    For performing any tasks required at initialization and termination of a session.<br><br>
+                    <b>4. Password Management (password)</b><br>
+                    For providing mechanism for managing the properties of a password and also change the authentication requirements for the user.<br><br>
+                    For each management group we can define a stack of modules.When an application calls the PAM library function, the PAM runtime will call each authentication function by its order in the configuration file.<br><br></p>
+
+                    <h4><b>The most commonly used control flags :</b></h4><br> 
+                    <p>
+                    <b>1. required: </b>The return code for a required module is stored. In case of first failure, the error message is stored, and parsing is carried out for the rest of the stack. However, the request isn't successful (regardless of response of other modules).<br><br>
+                    <b>2. sufficient: </b>The modules after a successful response of this module aren't called. In case of a failed response, other modules are checked.<br><br>
+                    <b>3. optional: </b>A failed response doesn't affect the execution of the stack. <br><br>
+                    <b>4. requisite: </b>In case of failure, PAM returns to the calling application and reports it instantly. No further rules are checked.<br><br>
+                    <b>5. include: </b>The authentication is redirected to another file, rules of which are checked for success.<br><br>
+                    <b>6. binding: </b>If the module is successful and no preceding modules that are flagged as required have failed, then remaining modules are skipped. In case of a failure, record the return code and continue processing the stack.
+                  </p>
+                    <img src="images\blog\pam-sshd-snippet.png" class="img-responsive" alt="reviews2">
+                    <p class="mb-30">
+                    Examples:<br>
+                    <b>1. Setting Password Requirements:</b><br>In this example, we set password requirement on a system to require a minimum of one symbol, one digit and a length of 12 characters.<br>Edit the existing pam_cracklib.so line in /etc/pam.d/system-auth and /etc/pam.d/password-auth so that it reads :
+                    </p>
+                    <img src="images\blog\pam-password-auth-update.png" class="img-responsive" alt="reviews2">
+                    <p class="mb-30">
+                    <b>2. Apply Limits to User:</b><br>In this example, we set a limit over how many processes an user can create on the machine. Edit /etc/security/limits.conf and add the given lines. It limits the user student to create no more than 5 processes on the system. And, visitor may only have 3 simultaneous open sessions to the machine.
+                    </p>
+                    <img src="images\blog\pam-limits-config.png" class="img-responsive" alt="reviews2">
+                    <p class="mb-30">
+                    <b>3. Locking Accounts with Failed Logins:</b><br>Here, we disable user accounts for 5 minutes in case of 5 sequential failed login attempts. Edit the existing pam_cracklib.so line in /etc/pam.d/system-auth and /etc/pam.d/password-auth so that it reads:
+                    </p>
+                    <img src="images\blog\pam-password-auth-update2.png" class="img-responsive" alt="reviews2">
+                    <br><br><hr><br><br>
+                    <h4>References:</h4>
+                    <p class="mb-30">
+                    "Pluggable Authentication Modules" by Kenneth Geisshirt [https://www.packtpub.com/networking-and-servers/pluggable-authentication-modules-definitive-guide-pam-linux-sysadmins-and-c-d]<br>
+                     Red Hat Customer Portal [https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/managing_smart_cards/pam_configuration_files]<br>
+                    "Pluggable Authentication Modules" by Dag-Erling Smorgrav [https://www.freebsd.org/doc/en_US.ISO8859-1/articles/pam/index.html]<br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  </div> -->
+  <!-- start section main content -->
+
+<!-- start section footer -->
+  <div id="footer" class="text-center">
+    <div class="socials-media text-center">
+        <ul class="list-unstyled list-social">
+          <li><a href="https://www.linkedin.com/in/yajushisri/"><i class="ion-social-linkedin"></i></a>
+          <a href="https://github.com/yajushiSri"><i class="ion-social-github"></i></a>
+          <a href="https://www.facebook.com/radiance.yajushi/"><i class="ion-social-facebook"></i></a>
+          <a href="https://twitter.com/yajushiSri"><i class="ion-social-twitter"></i></a>
+          <a href="https://www.instagram.com/radiance.yajushi/"><i class="ion-social-instagram"></i></a></li>
+        </ul>
+        <p style="color: #000;" class="separator text-center text-justify"><br>Write to me at *yajushi.sri@gmail.com*<br></p>
+    </div>
+  </div>
+<!-- End section footer -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/typed/typed.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+   <!-- Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

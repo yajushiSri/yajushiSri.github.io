@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>HOME | Yajushi</title>
+  <link rel="icon" type="image/ico" href="images/favicon.png" />
+
+  <!--meta section-->
+  <meta property="og:title" content="Yajushi Srivastava">
+  <meta property="og:description" content="Yajushi is a Computer Science Graduate, currently working in Mindtree Ltd as a Software Engineer.">
+  <meta property="og:image" content="images/header.png">
+  <meta property="og:url" content="https://yajushisri.github.io">
+  <meta content="Yajushi Srivastava yajushiSri Docker Jaipur DevOps Mindtree software photographer photography shivi varanasi PyJaipur GirlScript India" name="keywords">
+  <!--meta section end-->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/hover/hover.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Responsive css -->
+  <link href="css/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- start section navbar -->
+  <nav id="main-nav">
+    <div class="row">
+      <div class="container">
+
+        <div class="logo">
+          <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+        </div>
+
+        <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+        <ul class="nav-menu list-unstyled">
+          <li><a href="./index.html" class="smoothScroll">Home</a></li>
+          <li><a href="./index.html#about" class="smoothScroll">About</a></li>
+          <li><a href="./index.html#service" class="smoothScroll">Projects</a></li>
+          <li><a href="./index.html#blogs" class="smoothScroll">Blog</a></li>
+          <li><a href="./portfolio.html" class="smoothScroll">Portfolio</a></li>          
+          <li><a href="./index.html#contact" class="smoothScroll">Contact</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <!-- End section navbar -->
+  <!-- start section main content -->
+  <div class="main-content paddsection">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="row">
+            <div class="container-main single-main">
+              <div class="col-md-12">
+                <div class="block-main mb-30">
+                  <div class="content-main single-post padDiv">
+                    <div class="journal-txt">
+                      <h2>Understanding Firewalls and Netfilters</h2><hr><br>
+                    </div>
+                    <div class="post-meta">
+                      <ul class="list-unstyled mb-0">
+                        <li class="date">date: <a href="#">August 9, 2018</a></li>
+                      </ul>
+                    </div>
+                    <p class="mb-30">A Firewall is designed to prevent unauthorized outside users from accessing a network or host. It is a device (software or hardware), installed between the internal network and the Internet. Firewall performs filtering of the packets that attempt to enter or leave a network. This is done by defining various policies that enforce control over the network traffic.<br>
+                    A Bastion Host defines a simple firewall implementation, where the bastion host is any computer that is fully exposed to attack by being on the public side of the DMZ, unprotected by a firewall or filtering router. [1] <br>
+                    It is also referred to as the, Bastion firewall. The bastion node, is usually a very powerful server with improved security measures and custom software.</p>
+                    <img src="images\blog\bastion.jpg" class="img-responsive" alt="reviews2">
+                    <p class="mb-30">DMZ (Demilitarized Zone), also known as Perimeter Network, refers to the part of the network, that is neither private nor public. It introduces an additional layer of security, as external network has access to network devices and servers in the DMZ only. </p>
+                    <h2>Netfilter</h2> 
+                    <p>Netfilter is the program that implements a firewall within the Linux kernel, either compiled directly into the kernel or included as a set of modules. It wouldn't be wrong to refer to netfilter as the super-set of a firewall implementation. <br>
+                    Netfilter may be referred to as a generalized framework of hooks in the network stack. Any kernel module can plug into one or more of these hooks and receive packets traversing through these hooks. [2] <br>
+                    <h3>Netfilter Hooks</h3> 
+                    <p class="mb-30">1. <b>NF_IP_PRE_ROUTING</b> hook is triggered by any incoming packet. It is then passed to decide whether the packet is destined for another interface, or a local process. This refers as a routing decision.<br>2. If the packet is destined for a local process, it is passed over to the <b>NF_IP_LOCAL_IN</b> hook.<br>3. If the packet is destined for another interface or host, <b>NF_IP_FORWARD</b> hook is called from the netfilter framework.<br>4. If the packet is created locally, it is passed on to <b>NF_IP_LOCAL_OUT</b> hook. The routing decision is made after the packets passes through this hook.<br>5. <b>NF_IP_POST_ROUTING</b> is triggered after the routing decisions have been made. The packet passes this hook and sets off to the network again.<br></p>
+                   <img src="images\blog\hooks.jpg" class="img-responsive" alt="reviews2">
+                    <p class="mb-30">The kernel modules may register to one or more of these hooks, and for each packet passing through the hook. A function specified by the kernel module is called, which returns a decision for the netfilter framework to act upon. One of following five decisions is then processed by the netfilter:<br>
+                    1. <b>NF_ACCEPT:</b> Sustain the traversal as normal.<br>
+                    2. <b>NF_DROP:</b> Drop the packet; traversal is discontinued.<br>
+                    3. <b>NF_STOLEN:</b> Hook-registered module has taken over the packet; traversal discontinued.<br>
+                    4. <b>NF_QUEUE:</b> Packet is inserted into a dedicated queue inside the netfilter. It's then passed to an userspace process through a netlink socket, which further decides what to do with the packet.<br>
+                    5. <b>NF_REPEAT:</b> Hook is called again to process.<br></p>
+                    <br><br><hr><br><br>
+                    <p class="mb-30"><h4>References:</h4><br>
+                    [1]Krutz, Ronald; Vines, Russell (May 2003). The CISM Prep Guide: Mastering the Five Domains of Information Security Management. Wiley. p. 12. ISBN 9780471455981.<br>
+                    [2]KernelNewbies: Documents/Netfilter [https://kernelnewbies.org/Documents/Netfilter]<br>
+                    [3]Linux netfilter Hacking HOWTO [https://www.netfilter.org/documentation/HOWTO/netfilter-hacking-HOWTO.html#toc3]<br>
+                    "Linux Firewalls" by Steve Suehring<br>
+                    "Mastering Linux Security and Hardening" by Donald A. Tevault<br>
+                    Diagram credits: https://www.draw.io/<br></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  </div> -->
+  <!-- start section main content -->
+
+<!-- start section footer -->
+  <div id="footer" class="text-center">
+    <div class="socials-media text-center">
+        <ul class="list-unstyled list-social">
+          <li><a href="https://www.linkedin.com/in/yajushisri/"><i class="ion-social-linkedin"></i></a>
+          <a href="https://github.com/yajushiSri"><i class="ion-social-github"></i></a>
+          <a href="https://www.facebook.com/radiance.yajushi/"><i class="ion-social-facebook"></i></a>
+          <a href="https://twitter.com/yajushiSri"><i class="ion-social-twitter"></i></a>
+          <a href="https://www.instagram.com/radiance.yajushi/"><i class="ion-social-instagram"></i></a></li>
+        </ul>
+        <p style="color: #000;" class="separator text-center text-justify"><br>Write to me at *yajushi.sri@gmail.com*<br></p>
+    </div>
+  </div>
+<!-- End section footer -->
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/typed/typed.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+   <!-- Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

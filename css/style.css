@@ -110,7 +110,7 @@ p {
 }
 
 .padDiv {
-  padding: 20px 20px;
+  padding: 10px 10px;
 }
 
 .section-title {
@@ -555,7 +555,7 @@ nav ul li a {
 
 .journal-block .journal-info .journal-txt p {
   margin: 0;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 24px;
 }
 
