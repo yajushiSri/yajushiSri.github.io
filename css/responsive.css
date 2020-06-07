@@ -83,6 +83,15 @@
     float: none;
     display: inline-block;
   }
+  /*BLOG POST*/
+  #main-content{
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  #main-content p {
+    font-size: 5px;
+  }
 }
 
 /** Width between 767px to 0
@@ -200,6 +209,10 @@
     float: none;
     display: inline-block;
   }
+    #journal-content{
+    max-width: 100%;
+    margin-bottom: 0;
+
 }
 
 /** Width between 600px to 0
@@ -271,6 +284,11 @@
     float: none;
     display: inline-block;
   }
+    #journal-content{
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
 }
 
 /** Width between 480px to 0
@@ -340,6 +358,10 @@
     margin-left: 0;
     float: none;
     display: inline-block;
+  }
+  #journal-content{
+    max-width: 100%;
+    margin-bottom: 0;
   }
 }
 
@@ -415,5 +437,9 @@
   .entry-comments-body span {
     display: inline-block;
     margin-right: 0;
+  }
+  #journal-content{
+    max-width: 100%;
+    margin-bottom: 0;
   }
 }

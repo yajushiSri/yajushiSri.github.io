@@ -30,6 +30,7 @@
   <link href="lib/hover/hover.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
+  <link href="css/blog.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 
   <!-- Responsive css -->
@@ -84,10 +85,11 @@
                     <p class="mb-30">
                       The Pluggable Authentication Modules (PAM) library is a generalized API for authentication related services which allows a system administrator to dynamically configure authentication schemes for all PAM-enabled system utilities and applications by adding and removing PAM modules on the running system. It's a layer between Linux applications and native underlying authentication system. PAM is implemented as shared objects or so-files, and the applications communicate with the PAM library through the PAM API.
                     </p>
-                    <img src="images\blog\pam-framework.png" class="img-responsive" alt="reviews2">
+                    <!-- <img src="images\blog\pam-framework.png" class="img-responsive" alt="reviews2"> -->
+                    <img src="images\blog\pam-framework.png">
                     <p class="mb-30">Traditionally, login authentication is done by comparing the encrypted password for the user in the password file (/etc/shadow), but each program that requires authentication implements its own authentication mechanisms. For example, various services like FTP, SSH, et cetera have individual ways of authenticating their users. As a result, the administrator has to spend unnecessary amount of time in maintaining the database. A PAM service module provides authentication and other security services to such applications. 
                     </p>
-                    <img src="images\blog\pam-system-layout.png" class="img-responsive" alt="reviews2">
+                    <img src="images\blog\pam-system-layout.png">
                     <p class="mb-30">
                     Syntax for application's configuration files in /etc/pam.d is,<br>
                       module-type  control-flag  module-path  module-arguments<br></p>
@@ -113,26 +115,26 @@
                     <b>5. include: </b>The authentication is redirected to another file, rules of which are checked for success.<br><br>
                     <b>6. binding: </b>If the module is successful and no preceding modules that are flagged as required have failed, then remaining modules are skipped. In case of a failure, record the return code and continue processing the stack.
                   </p>
-                    <img src="images\blog\pam-sshd-snippet.png" class="img-responsive" alt="reviews2">
+                    <img src="images\blog\pam-sshd-snippet.png">
                     <p class="mb-30">
                     Examples:<br>
                     <b>1. Setting Password Requirements:</b><br>In this example, we set password requirement on a system to require a minimum of one symbol, one digit and a length of 12 characters.<br>Edit the existing pam_cracklib.so line in /etc/pam.d/system-auth and /etc/pam.d/password-auth so that it reads :
                     </p>
-                    <img src="images\blog\pam-password-auth-update.png" class="img-responsive" alt="reviews2">
+                    <img src="images\blog\pam-password-auth-update.png">
                     <p class="mb-30">
                     <b>2. Apply Limits to User:</b><br>In this example, we set a limit over how many processes an user can create on the machine. Edit /etc/security/limits.conf and add the given lines. It limits the user student to create no more than 5 processes on the system. And, visitor may only have 3 simultaneous open sessions to the machine.
                     </p>
-                    <img src="images\blog\pam-limits-config.png" class="img-responsive" alt="reviews2">
+                    <img src="images\blog\pam-limits-config.png">
                     <p class="mb-30">
                     <b>3. Locking Accounts with Failed Logins:</b><br>Here, we disable user accounts for 5 minutes in case of 5 sequential failed login attempts. Edit the existing pam_cracklib.so line in /etc/pam.d/system-auth and /etc/pam.d/password-auth so that it reads:
                     </p>
-                    <img src="images\blog\pam-password-auth-update2.png" class="img-responsive" alt="reviews2">
+                    <img src="images\blog\pam-password-auth-update2.png">
                     <br><br><hr><br><br>
                     <h4>References:</h4>
                     <p class="mb-30">
-                    "Pluggable Authentication Modules" by Kenneth Geisshirt [https://www.packtpub.com/networking-and-servers/pluggable-authentication-modules-definitive-guide-pam-linux-sysadmins-and-c-d]<br>
-                     Red Hat Customer Portal [https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/managing_smart_cards/pam_configuration_files]<br>
-                    "Pluggable Authentication Modules" by Dag-Erling Smorgrav [https://www.freebsd.org/doc/en_US.ISO8859-1/articles/pam/index.html]<br>
+                    <a href="https://www.packtpub.com/networking-and-servers/pluggable-authentication-modules-definitive-guide-pam-linux-sysadmins-and-c-d">"Pluggable Authentication Modules" by Kenneth Geisshirt</a><br>
+                    <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/managing_smart_cards/pam_configuration_files">Red Hat Customer Portal</a><br>
+                    <a href="https://www.freebsd.org/doc/en_US.ISO8859-1/articles/pam/index.html">"Pluggable Authentication Modules" by Dag-Erling Smorgrav</a><br>
                     </p>
                   </div>
                 </div>
