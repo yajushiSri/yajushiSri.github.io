@@ -499,11 +499,12 @@ nav ul li a {
 /*-----------------------------------------------------------------------------------*/
 
 #journal,  #journal-blog {
-  height: auto;
-  width: 100%;
-  background: #f7f7f7;
-  padding-bottom: 60px;
-  position: relative;
+  background-color: #fff;
+  padding: 1.5rem 0.7rem;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
+  padding-top: 0px;
+  padding-bottom: 50px;
 }
 
 #journal-blog {
@@ -512,9 +513,14 @@ nav ul li a {
 }
 
 #journal .journal-block {
+  margin: 15px 0;
+  position: relative;
+  font-size: 10px;
+  color: #292929;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  text-transform: uppercase;
   display: inline-block;
-  height: auto;
-  width: 100%;
 }
 
 #journal .journal-block .journal-info {
@@ -559,6 +565,24 @@ nav ul li a {
   line-height: 24px;
 }
 
+.journal-block .s-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: .4rem 0;
+  color: #D3F451;
+}
+
+.journal-block .s-description {
+  color: #4e4e4e;
+}
+
+.journal-block .s-description a{
+  color: #0B5869;
+}
+.journal-block .s-title a{
+  color: #D3F451;
+}
 /*-----------------------------------------------------------------------------------*/
 /*  Contact
 /*-----------------------------------------------------------------------------------*/
