@@ -161,7 +161,6 @@ $(window).load(function(){
 // ========================================================================= //
 
 var targetUrls = '{"targets": [' +
-'{"title":"Neuroscience News Science Magazine","image":"https://demos.codetipi.com/zeen/wp-content/uploads/sites/2/2020/06/da-box-mobile.jpg","url":"https://neurosciencenews.com/","filter":"read"},' + 
 '{"title":"Human Behavioral Biology - Robert Sapolsky","image":"https://i.ytimg.com/vi/NNnIGh9g6fA/hqdefault.jpg","url":"https://youtu.be/NNnIGh9g6fA","filter":"play"},' +
 '{"title":"Nancy MIT Course 9.11: The Human Brain","image":"https://i.ytimg.com/vi/i1pdQjdAndc/maxresdefault.jpg","url":"https://youtu.be/i1pdQjdAndc","filter":"play"},' + 
 '{"title":"Papers with Code - The latest in Machine Learning","image":"https://paperswithcode.com/static/index.jpeg","url":"https://paperswithcode.com/","filter":"research"},' + 
@@ -173,6 +172,7 @@ var targetUrls = '{"targets": [' +
 '{"title":"AI Engineering - Srivatsan Srinivasan","image":"https://i.ytimg.com/vi/ekHvVeNRFBI/maxresdefault.jpg","url":"https://www.youtube.com/channel/UCwBs8TLOogwyGd0GxHCp-Dw","filter":"learn"},' +
 '{"title":"Google Cloud Ready Facilitator Program","image":"https://google.qwiklabs.com/favicon-144.png","url":"https://google.qwiklabs.com/public_profiles/6bb5729e-5399-4215-948f-fa801d0711c0","filter":"code"},' +
 '{"title":"Papers in Neuroscience","image":"https://www.ncbi.nlm.nih.gov/corehtml/pmc/pmcgifs/pmc-logo-share.png","url":"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4640495/","filter":"research"},' +
+'{"title":"Neuroscience News Science Magazine","image":"https://demos.codetipi.com/zeen/wp-content/uploads/sites/2/2020/06/da-box-mobile.jpg","url":"https://neurosciencenews.com/","filter":"read"},' + 
 '{"title":"Data Structures & Algorithms, Level-up Course","image":"https://img-b.udemycdn.com/course/480x270/3642112_bd0f_10.jpg?secure=gpZ4b6jKhOgcswBG0Ra5jg%3D%3D%2C1622382460","url":"https://www.udemy.com/course/cpp-data-structures-algorithms-levelup-prateek-narang/","filter":"learn"},' + 
 '{"title":"Machine Learning A-Z (Python & R in Data Science Course)","image":"https://img-c.udemycdn.com/course/480x270/950390_270f_3.jpg?…oBvB~LRiocBywARNDPINvEvgg__&Key-Pair-Id=APKAITJV77WS5ZT7262A","url":"https://www.udemy.com/course/machinelearning/","filter":"learn"},' + 
 '{"title":"Deep Learning and Computer Vision A-Z: OpenCV, SSD & GANs","image":"https://img-b.udemycdn.com/course/480x270/1357844_25b2.jpg?secure=9V4_Wev18AoXCM4kv7mIJQ%3D%3D%2C1622382460","url":"https://www.udemy.com/course/computer-vision-a-z/","filter":"learn"}]}';
@@ -186,7 +186,8 @@ for(let i = 0; i < response.targets.length; i++){
 
   var cardImg = document.createElement('img');
     cardImg.setAttribute('class', 'img card-img-top');
-    cardImg.setAttribute('src', response.targets[i].image)
+    cardImg.setAttribute('src', response.targets[i].image);
+    cardImg.setAttribute('alt', 'Image Unavailable');
     
     var cardTitle = document.createElement('h4');
     cardTitle.textContent = response.targets[i].title;
